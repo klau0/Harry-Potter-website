@@ -1,0 +1,625 @@
+/* --------------- FEJLÉC & MENÜ --------------- */
+header {
+    background-image: url('../img/potter.jpg');
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+header img{
+    margin: 0;
+    width: 20%;
+    position: relative;
+    top: 30%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+.flex-container{
+    z-index: 1;
+    display: flex;
+    position: sticky;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding: 8px;
+}
+#pen1, #pen2 {
+    box-sizing: border-box;
+    padding: 0 0;
+    width: 4vw;
+}
+nav > a {
+    cursor: inherit;
+    border-radius: 15px 15px;
+    display: block;
+    padding: 10px 20px;
+    border: 1px solid black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 23px;
+    color: white;
+}
+.active{
+    background-color: #676767;
+}
+nav > a:hover:not(.active){
+    background-color: #343434;
+}
+
+/* --------------- MAIN --------------- */
+
+.bg{
+    background: url("../img/paper2.png") repeat-y center, url("../img/dark-starry-sky.jpg") repeat-y;
+    background-size: 50%, cover;
+    padding: 1px 0;
+}
+body {
+    cursor: url("../img/lilwand.png"), auto;
+    margin: auto;
+    font-family: Goudy Old Style, Garamond, serif;
+    font-size: 27px;
+}
+::selection{
+    background-color: #FFD95A;
+}
+.bold{
+    font-weight: bold;
+}
+.kozepre{
+    text-align: center;
+}
+.dolt{
+    font-style: italic;
+}
+.kozepre_igazit{
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+    display: block;
+}
+.font_outline{
+    text-shadow: -1px 0 #4c4c4c, 0 1px #4c4c4c, 1px 0 #4c4c4c, 0 -1px #4c4c4c;
+}
+/* --------------- LÁBLÉC --------------- */
+
+footer{
+    background-color: black;
+    color: white;
+    bottom: 0;
+    padding: 1px;
+    font-family: Papyrus, "Goudy Old Style", serif;
+    clear: both;
+}
+footer img{
+    padding-top: 25px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+}
+
+/* --------------- ŰRLAP --------------- */
+
+.form_container{
+    padding: 30px 0;
+    border: none;
+    box-sizing: border-box;
+    width: 50%;
+    min-width: 550px;
+    margin: 4vh auto 9vh;
+}
+.reg_grid{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 15px;
+    justify-content: space-evenly;
+}
+
+.required::after{
+    content: "*";
+    color: red;
+    font-weight: bold;
+    font-size: x-large;
+}
+input[type="reset"], input[type="submit"]{
+    cursor: pointer;
+}
+
+.submit {
+    font-size: 24px;
+    color: white;
+    font-family: serif;
+    border-radius: 15px 15px;
+    border-color: black;
+    box-sizing: border-box;
+    background-color: black;
+    padding: 10px 10px;
+}
+
+input[type="file"]{
+    display: none;
+}
+input[type='radio']{
+    transform: scale(1.5) translateY(-3px);
+    accent-color: black;
+}
+input[type="checkbox"]{
+    transform: scale(1.2) translateY(-3px);
+    accent-color: black;
+}
+.custom-file-upload {
+    font-size: 21px;
+    font-family: serif;
+    background-color: black;
+    color: white;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 15px 15px;
+    width: max-content;
+    display: inline-block;
+    padding: 0 10px;
+    cursor: pointer;
+}
+.inputText{
+    font-size: 18px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    width: 250px;
+}
+.label{
+    display: block;
+    box-sizing: border-box;
+    width: fit-content;
+}
+
+#school {
+    padding: 5px 100px 5px 5px;
+    margin: 0 auto;
+    font-size: 18px;
+    border-radius: 8px;
+    background-color: whitesmoke;
+    letter-spacing: 1px;
+}
+.radio_button label, label[for="avatar"]{
+    line-height: 1.8;
+}
+.checkbox{
+    padding-top: 15px;
+}
+
+
+/* --------------- FŐOLDAL --------------- */
+
+.paper_bg{
+    background: url("../img/paper2.png") repeat-y, url("../img/dark-starry-sky.jpg") repeat-y;
+    background-size: 100%, cover;
+    padding: 30px 80px;
+}
+blockquote {
+    margin: 3px 20px 18px 20px;
+    text-align: center;
+    font-family:  Gabriola, Papyrus, serif !important;
+    line-height: 1.5;
+}
+section{
+    padding: 10px 15px;
+    margin-bottom: 10px;
+}
+ul{
+    list-style-image: url("../img/star.png");
+    line-height: 1.6;
+}
+#godrik{
+    color: red;
+    letter-spacing: 1px;
+}
+#helga{
+    color: #FFC300 ;
+    letter-spacing: 1px;
+}
+#hedvig{
+    color: #0095E2;
+    letter-spacing: 1px;
+}
+#malazar{
+    color: #00C43D;
+    letter-spacing: 1px;
+}
+
+#welcome{
+    text-transform: capitalize;
+    font-weight: 900;
+    color: black;
+}
+#aside{
+    display: block;
+    color: black;
+    font-size: 29px;
+    text-decoration: underline wavy 2px #646464;
+    text-underline-offset: 0.2em;
+}
+aside{
+    box-shadow: 3px 3px 3px grey;
+    border-radius: 15px 15px;
+    padding: 10px 10px;
+    background-color: #fff3df;
+    width: 400px;
+    float: right;
+    transform: translate(-25%, 38%);
+}
+
+/* ---- Táblázat ---- */
+
+caption{
+    color: #ffb400;
+    font-size: 36px;
+    padding: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+#index_table {
+    font-family: "Goudy Old Style", serif;
+}
+#index_table_div{
+    position: relative;
+    width: fit-content;
+    left: 7%;
+    margin-bottom: 40px;
+}
+td:first-child,
+th:first-child {
+    border-radius: 10px 0 0 10px;
+}
+td:last-child,
+th:last-child {
+    border-radius: 0 10px 10px 0;
+}
+tbody tr:nth-of-type(odd){
+    background-color: #fff9ea;
+}
+thead tr{
+    color: white;
+    background-color: #303030;
+}
+td, th{
+    text-align: center;
+    padding: 7px;
+    vertical-align: middle;
+}
+td[headers="shop"], th[id="shop"]{
+    text-align: left;
+}
+
+/* --------------- KATEGÓRIÁK --------------- */
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5vw 5vw;
+    padding: 30px 100px 35px;
+    background: url("../img/dark-starry-sky.jpg") repeat;
+    background-size: contain;
+}
+.grid-container > *{
+    padding: 8vw 8vw;
+    border-radius: 15px 15px;
+    background-size: cover;
+
+}
+.grid-container > a > *{
+    background-color: white;
+    position: relative;
+    top: 50%;
+    translateY(-50%);
+    display: inline-block;
+    width: 100px;
+    padding: 15px 15px;
+    border-radius: inherit;
+}
+.category{
+    color: black;
+    letter-spacing: 1px;
+}
+#clothes{
+    background-image: url("../img/clothes.jpg");
+}
+#books{
+    background-image: url("../img/konyv.png");
+}
+#sweets{
+    background-image: url("../img/edesseg.png");
+}
+#school_stuff{
+    background-image: url("../img/tanszerek.jpg");
+    grid-column: 2;
+    grid-row: 2 / span 2;
+}
+#brooms{
+    background-image: url("../img/sepru.jpg");
+}
+
+/* --------------- TERMÉKEK, KOSÁR ------------------- */
+
+.termek-grid-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    gap: 4vw 3vw;
+    padding: 35px 90px;
+    background: url("../img/dark-starry-sky.jpg") repeat-y;
+    background-size: cover;
+    justify-content: space-evenly;
+}
+.kartya {
+    background: url("../img/paper2.png");
+    background-size: 100%;
+    width: 300px;
+    padding: 10px 0 20px;
+}
+.kartya > img {
+    width: 250px;
+    border-radius: 25px 25px;
+}
+.flex-inside-cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.kosarba {
+    border-radius: 20px;
+    box-sizing: border-box;
+    width: max-content;
+    display: block;
+    background-color: black;
+    color: white;
+    margin: 10px auto 0;
+    padding: 8px 20px;
+    font-size: 19px;
+}
+.del_btn{
+    border-radius: 20px;
+    box-sizing: border-box;
+    width: max-content;
+    display: block;
+    background-color: #ff4934;
+    color: white;
+    margin: 30px auto 0;
+    padding: 8px 20px;
+    font-size: 19px;
+}
+.w-negyed {
+    padding: 5px 20px;
+    border-radius: 45px 45px;
+    font-size: large;
+    background-color: white;
+    cursor: url("../img/lilwand.png"), auto;
+}
+.nev{
+    font-size: 30px;
+    width: 80%;
+    margin-bottom: 0;
+    margin-top: 15px;
+}
+.meret{
+    color: #ff5a00;
+    letter-spacing: 1px;
+    width: max-content;
+    margin-top: 10px;
+}
+
+.db {
+    box-sizing: content-box;
+    border-radius: 15px 15px;
+    border-color: whitesmoke;
+    height: max-content;
+    padding: 5px 0 5px 15px;
+    font-size: large;
+}
+
+.db:focus{
+    outline: none;
+    border-color: rgba(229, 103, 23, 0.8);
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(229, 103, 23, 0.6);
+}
+
+.meretek {
+    padding-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.meretek label{
+    padding: 5px 10px;
+    display: none;
+}
+#empty_cart{
+    background: url("../img/dark-starry-sky.jpg") repeat-y;
+    background-size: cover;
+    padding-top: 50px;
+    padding-bottom: 150px;
+}
+#empty_cart_text{
+    color: white;
+    font-size: 36px;
+    letter-spacing: 1px;
+}
+
+/* --------------- PROFIL, HIBÁK --------------- */
+
+#profile-table{
+    box-sizing: border-box;
+    padding: 5px 10px 0;
+    line-height: 1.7;
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+.profil_btn{
+    font-size: 21px;
+    color: white;
+    font-family: serif;
+    border-radius: 15px 15px;
+    border-color: #444444;
+    box-sizing: border-box;
+    background-color: #595959;
+    padding: 5px 10px;
+}
+#profilkep{
+    border-radius: 20px 20px;
+}
+#profile-table tr:first-of-type{
+    background-color: unset;
+}
+#profile-table tr:nth-of-type(2){
+    color: white;
+    background-color: #303030;
+    letter-spacing: 1px;
+}
+.profil_bg{
+    background: url("../img/paper2.png") repeat-y center, url("../img/dark-starry-sky.jpg") repeat-y;
+    background-size: 65%, cover;
+    padding: 30px 10px;
+}
+.logout-form{
+    padding-bottom: 30px;
+}
+
+.errors, .success {
+    border-radius: 15px 15px;
+    width: max-content;
+    margin: 10px auto;
+    padding: 1px 50px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.errors {
+    background-color: #ff563c;
+}
+
+.success {
+    background-color: limegreen;
+}
+
+
+/* --------------- ANIMÁCIÓK ------------------ */
+
+.zoom {
+    transition: transform .5s;
+}
+.zoom:hover {
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.float {
+    animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+    0% {
+        transform: translateY(15px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(15px);
+    }
+}
+
+/* --------------- MEDIA-QUERY --------------- */
+
+@media (max-width: 1570px){
+    aside{
+        float: none;
+        transform: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #index_table_div{
+        margin-left: auto;
+        margin-right: auto;
+        position: unset;
+    }
+}
+
+@media (max-width: 1100px){
+    .bg{
+        background-size: 70%, cover;
+    }
+}
+
+@media (max-width: 950px){
+    .profil_bg{
+        background-size: 85%, cover;
+    }
+}
+
+@media (max-width: 940px){
+    .grid-container{
+        padding: 30px 30px 35px;
+    }
+}
+
+@media only screen and (max-width: 930px){
+    .flex-container{
+        flex-wrap: wrap;
+    }
+    header {
+        height: 40vh;
+    }
+}
+
+@media (max-width: 780px){
+    .bg{
+        background-size: 90%, cover;
+    }
+}
+
+@media (max-width: 750px){
+    #index_table_div{
+        width: unset;
+        overflow-x: scroll;
+    }
+}
+
+@media (max-width: 700px){
+    .paper_bg{
+        padding: 30px 45px;
+    }
+}
+
+@media (max-width: 620px){
+    .bg{
+        background-size: 99%, cover;
+    }
+}
+
+@media (max-width: 580px){
+    .reg_grid{
+        width: max-content;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .form_container{
+        min-width: 470px;
+    }
+    .inputText{
+        width: 220px;
+    }
+    .grid-container{
+        padding: 30px 10px 35px;
+    }
+}
+
+@media (max-width: 530px){
+    aside{
+        width: 350px;
+    }
+}
+
+
+
