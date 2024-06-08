@@ -1,4 +1,7 @@
 # Harry Potter témájú webshop
+
+![Screenshot of the categories page](/img/screen.png)
+
 ### XAMPP-al localhost-on futtatva lehet megnyitni böngészőben
 #### Ehhez a szükséges lépések:
 1. Ha még nincs letöltve, akkor a XAMPP [letöltése](https://www.apachefriends.org/download.html)
