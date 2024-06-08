@@ -18,7 +18,7 @@ function showItems($pdo, $from, $to, $alt){
                         <p class='price kozepre'>Ár: ".$row['ar']."</p>
                     </div>
                     <div class='flex-inside-cards'>
-                        <input type='text' class='db' name='db' placeholder='0' min='0' size='1' oninput='dinamicNumberInput(this)'>
+                        <input type='text' class='db' name='db' placeholder='0' min='0' oninput='dinamicNumberInput(this)'>
                         <input class='kosarba' type='submit' name='kosarba' value='Kosárba' style='margin: 0 0 0 7px'>
                     </div>
                     <input type='number' name='termekID' value='".$row['id']."' style='display: none'>

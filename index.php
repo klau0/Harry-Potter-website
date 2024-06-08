@@ -62,13 +62,7 @@
             benézhetnek az üzletekbe. (A Zsebpiszok közt lehetőleg kerüljék)
         </section>
 
-        <aside>
-            <span class="kozepre" id="aside">Megjegyzés</span><br>
-            Ollivander a Szent Mungó 4.emeletén lábadozik, mert eltalálta egy helytelenül alkalmazott bűbáj.
-            A gyógyítója szerint már jobban van, mostanra vendégeket is fogadhat.
-            Azonban amíg távol van, Stan Shunpike (a Kóbor Grimbusz egykori kalauza) veszi át a bolt vezetését.
-            Mivel Stan nem igazán ért a pálcák készítéséhez, így Ollivander visszatéréséig új darabok sajnos nem kaphatók.
-        </aside>
+        <div style="position: relative">
 
         <div id='index_table_div'>
         <table id="index_table">
@@ -146,6 +140,15 @@
                 </tr>
             </tbody>
         </table>
+        </div>
+
+            <aside>
+                <span class="kozepre" id="aside">Megjegyzés</span><br>
+                Ollivander a Szent Mungó 4.emeletén lábadozik, mert eltalálta egy helytelenül alkalmazott bűbáj.
+                A gyógyítója szerint már jobban van, mostanra vendégeket is fogadhat.
+                Azonban amíg távol van, Stan Shunpike (a Kóbor Grimbusz egykori kalauza) veszi át a bolt vezetését.
+                Mivel Stan nem igazán ért a pálcák készítéséhez, így Ollivander visszatéréséig új darabok sajnos nem kaphatók.
+            </aside>
         </div>
 
         <section>

@@ -3,11 +3,13 @@ function dinamicNumberInput(input){
         input.value = input.value.substring(0, input.value.length-1);
     }
 
-    if(input.value.length > 0){
-        input.size = input.value.length;
+    let uj_meret = input.value.length * 10;
+
+    if (uj_meret > 0){
+        input.style.width = uj_meret + "px";
     }
 
-    if (input.size > 10){
-        input.size = 10;
+    if (input.style.width.substring(0, input.style.width.length - 2) > 100){
+        input.style.width = "100px";
     }
 }

@@ -78,6 +78,7 @@
             $stmt->execute();
 
             $item = $stmt->fetch(PDO::FETCH_ASSOC);
+            $hossz = strlen((string)$cart_row['db']) * 10;
 
             echo "<form class='kartya' method='post' autocomplete='off'>
                     <img class='kozepre_igazit' src='".$item['kep']."' alt='termék'>
@@ -90,7 +91,7 @@
                             <p class='price kozepre'>Ár: ".$item['ar']."</p>
                         </div>
                         <div class='flex-inside-cards'>
-                            <input type='text' class='db' name='db' value='".$cart_row['db']."' placeholder='0' min='0' size='".strlen((string)$cart_row['db'])."' oninput='dinamicNumberInput(this)'>
+                            <input type='text' class='db' name='db' value='".$cart_row['db']."' placeholder='0' min='0' style='width: ".$hossz."px' oninput='dinamicNumberInput(this)'>
                             <input class='kosarba' type='submit' name='modify' value='Módosít' style='margin: 0 7px 0 7px'>
                         </div>
                         <input class='del_btn' type='submit' name='delete' value='Töröl'>

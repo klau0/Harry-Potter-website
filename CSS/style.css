@@ -18,7 +18,8 @@ header img{
     z-index: 1;
     display: flex;
     position: sticky;
-    top: 0;
+    flex-wrap: wrap;
+    top: -1px;
     justify-content: center;
     align-items: center;
     background-color: black;
@@ -165,6 +166,7 @@ input[type="checkbox"]{
     font-size: 18px;
     padding: 10px 10px;
     border-radius: 10px;
+    border-color: whitesmoke;
     width: 250px;
 }
 .label{
@@ -178,6 +180,8 @@ input[type="checkbox"]{
     margin: 0 auto;
     font-size: 18px;
     border-radius: 8px;
+    border-color: darkgrey;
+    border-width: 2px;
     background-color: whitesmoke;
     letter-spacing: 1px;
 }
@@ -209,6 +213,7 @@ section{
 ul{
     list-style-image: url("../img/star.png");
     line-height: 1.6;
+    margin-left: 25px;
 }
 #godrik{
     color: red;
@@ -237,7 +242,7 @@ ul{
     color: black;
     font-size: 29px;
     text-decoration: underline wavy 2px #646464;
-    text-underline-offset: 0.2em;
+    text-underline-offset: 0.3em;
 }
 aside{
     box-shadow: 3px 3px 3px grey;
@@ -245,8 +250,9 @@ aside{
     padding: 10px 10px;
     background-color: #fff3df;
     width: 400px;
-    float: right;
-    transform: translate(-25%, 38%);
+    position: absolute;
+    top: 25%;
+    left: 60%;
 }
 
 /* ---- Táblázat ---- */
@@ -266,14 +272,6 @@ caption{
     width: fit-content;
     left: 7%;
     margin-bottom: 40px;
-}
-td:first-child,
-th:first-child {
-    border-radius: 10px 0 0 10px;
-}
-td:last-child,
-th:last-child {
-    border-radius: 0 10px 10px 0;
 }
 tbody tr:nth-of-type(odd){
     background-color: #fff9ea;
@@ -300,19 +298,17 @@ td[headers="shop"], th[id="shop"]{
     padding: 30px 100px 35px;
     background: url("../img/dark-starry-sky.jpg") repeat;
     background-size: contain;
+    justify-items: center;
 }
-.grid-container > *{
+.grid-container > a{
     padding: 8vw 8vw;
     border-radius: 15px 15px;
     background-size: cover;
-
 }
-.grid-container > a > *{
+.grid-container > a > div{
     background-color: white;
-    position: relative;
-    top: 50%;
-    translateY(-50%);
     display: inline-block;
+    transform: translateX(-8%);
     width: 100px;
     padding: 15px 15px;
     border-radius: inherit;
@@ -320,6 +316,7 @@ td[headers="shop"], th[id="shop"]{
 .category{
     color: black;
     letter-spacing: 1px;
+    width: 50%;
 }
 #clothes{
     background-image: url("../img/clothes.jpg");
@@ -334,6 +331,10 @@ td[headers="shop"], th[id="shop"]{
     background-image: url("../img/tanszerek.jpg");
     grid-column: 2;
     grid-row: 2 / span 2;
+}
+#school_stuff div{
+    position: relative;
+    top: 35%;
 }
 #brooms{
     background-image: url("../img/sepru.jpg");
@@ -370,6 +371,7 @@ td[headers="shop"], th[id="shop"]{
 
 .kosarba {
     border-radius: 20px;
+    border-color: whitesmoke;
     box-sizing: border-box;
     width: max-content;
     display: block;
@@ -381,6 +383,7 @@ td[headers="shop"], th[id="shop"]{
 }
 .del_btn{
     border-radius: 20px;
+    border-color: whitesmoke;
     box-sizing: border-box;
     width: max-content;
     display: block;
@@ -393,6 +396,7 @@ td[headers="shop"], th[id="shop"]{
 .w-negyed {
     padding: 5px 20px;
     border-radius: 45px 45px;
+    border-color: whitesmoke;
     font-size: large;
     background-color: white;
     cursor: url("../img/lilwand.png"), auto;
@@ -415,11 +419,12 @@ td[headers="shop"], th[id="shop"]{
     border-radius: 15px 15px;
     border-color: whitesmoke;
     height: max-content;
-    padding: 5px 0 5px 15px;
-    font-size: large;
+    width: 10px;
+    padding: 5px 15px;
+    font-size: 18px;
 }
 
-.db:focus{
+.db:focus, .inputText:focus{
     outline: none;
     border-color: rgba(229, 103, 23, 0.8);
     box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(229, 103, 23, 0.6);
@@ -532,9 +537,55 @@ td[headers="shop"], th[id="shop"]{
 
 /* --------------- MEDIA-QUERY --------------- */
 
-@media (max-width: 1570px){
+@media only screen and (min-width: 1750px){
     aside{
-        float: none;
+        left: 65%;
+    }
+    #index_table_div{
+        left: 15%;
+    }
+    #profile-table{
+        width: 35%;
+    }
+    .category{
+        width: 40%;
+    }
+    .grid-container{
+        justify-content: center;
+        column-gap: 200px;
+    }
+}
+
+@media only screen and (max-width: 1680px){
+    aside{
+       left: 62%;
+    }
+    #index_table_div{
+        left: 4%;
+    }
+}
+
+@media only screen and (max-width: 1550px){
+    aside{
+        left: 65%;
+    }
+    #index_table_div{
+        left: 2%;
+    }
+}
+
+@media only screen and (max-width: 1490px){
+    aside{
+        left: 64%;
+    }
+    #index_table_div{
+        left: 1%;
+    }
+}
+
+@media only screen and (max-width: 1440px){
+    aside{
+        position: unset;
         transform: none;
         margin-left: auto;
         margin-right: auto;
@@ -546,59 +597,56 @@ td[headers="shop"], th[id="shop"]{
     }
 }
 
-@media (max-width: 1100px){
+@media only screen and (max-width: 1100px){
     .bg{
         background-size: 70%, cover;
     }
 }
 
-@media (max-width: 950px){
+@media only screen and (max-width: 950px){
     .profil_bg{
         background-size: 85%, cover;
     }
 }
 
-@media (max-width: 940px){
+@media only screen and (max-width: 940px){
     .grid-container{
         padding: 30px 30px 35px;
     }
 }
 
 @media only screen and (max-width: 930px){
-    .flex-container{
-        flex-wrap: wrap;
-    }
     header {
         height: 40vh;
     }
 }
 
-@media (max-width: 780px){
+@media only screen and (max-width: 780px){
     .bg{
         background-size: 90%, cover;
     }
 }
 
-@media (max-width: 750px){
+@media only screen and (max-width: 750px){
     #index_table_div{
         width: unset;
         overflow-x: scroll;
     }
 }
 
-@media (max-width: 700px){
+@media only screen and (max-width: 700px){
     .paper_bg{
         padding: 30px 45px;
     }
 }
 
-@media (max-width: 620px){
+@media only screen and (max-width: 620px){
     .bg{
         background-size: 99%, cover;
     }
 }
 
-@media (max-width: 580px){
+@media only screen and (max-width: 580px){
     .reg_grid{
         width: max-content;
         margin-right: auto;
@@ -615,7 +663,7 @@ td[headers="shop"], th[id="shop"]{
     }
 }
 
-@media (max-width: 530px){
+@media only screen and (max-width: 530px){
     aside{
         width: 350px;
     }
